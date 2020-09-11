@@ -1,0 +1,6 @@
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\bin\Debug\Code_Wars.exe.config
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\bin\Debug\Code_Wars.exe
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\bin\Debug\Code_Wars.pdb
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.csprojAssemblyReference.cache
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.exe
+E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.pdb
