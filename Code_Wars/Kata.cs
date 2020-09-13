@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -105,6 +106,62 @@ namespace Code_Wars
             }
             return 0;
         }
+
+        public static List<string> Anagrams(string word, List<string> words)
+        {
+            Dictionary<char,int> dictionary = new Dictionary<char, int>();
+            List<string> anagrams = new List<string>();
+            Dictionary<char, int> check = new Dictionary<char, int>();
+
+            foreach (char ch in word) 
+            {
+                int count = word.Where(x => x.Equals(ch)).Count();
+                if (!dictionary.Keys.Contains(ch))
+                {
+                    dictionary.Add(ch, count);
+                }
+            }
+
+            foreach (string lst_word in words) 
+            {
+                foreach (char ch in lst_word)
+                {
+                    int count = lst_word.Where(x => x.Equals(ch)).Count();
+                    if (!check.Keys.Contains(ch))
+                    {
+                        check.Add(ch, count);
+                    }
+                }
+                if (check.Count == dictionary.Count) 
+                {
+                    bool check_word = true;
+                    foreach (KeyValuePair<char, int> valuePair in check) 
+                    {
+                        if (dictionary.Keys.Contains(valuePair.Key))
+                        {
+                            if (check[valuePair.Key] != dictionary[valuePair.Key])
+                            {
+                                check_word = false;
+                            }
+                        }
+                        else {
+                            check_word = false;
+                         }
+                    }
+                    if (check_word)
+                    {
+                        anagrams.Add(lst_word);
+                    }
+                }
+                check.Clear();
+            }
+
+            return anagrams;
+
+            //bp
+            //var pattern = word.OrderBy(p => p).ToArray();
+            //return words.Where(item => item.OrderBy(p => p).SequenceEqual(pattern)).ToList();
+        }
     }
 
     public class PagnationHelper<T> 
@@ -129,13 +186,13 @@ namespace Code_Wars
         {
             get
             {
-                return (int)Math.Ceiling((decimal)collect.Count/(decimal)item);
+                return (int)Math.Ceiling((decimal)collect.Count / (decimal)item);
             }
         }
 
         public int PageItemCount(int pageIndex)
         {
-            return pageIndex<0 || pageIndex>this.PageCount-1? -1 : pageIndex < this.PageCount - 1? this.item: this.ItemCount - ((this.PageCount - 1) * this.item);
+            return pageIndex < 0 || pageIndex > this.PageCount - 1 ? -1 : pageIndex < this.PageCount - 1 ? this.item : this.ItemCount - ((this.PageCount - 1) * this.item);
         }
 
         public int PageIndex(int itemIndex)
@@ -146,7 +203,7 @@ namespace Code_Wars
             {
                 return 0;
             }
-            else 
+            else
             {
                 int itemsLeft = itemIndex;
                 int pages = 0;
@@ -155,6 +212,7 @@ namespace Code_Wars
                     itemsLeft -= item;
                     pages++;
                 } while (itemsLeft >= item);
+
                 return pages;
             }
         }
