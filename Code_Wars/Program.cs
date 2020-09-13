@@ -22,7 +22,10 @@ namespace Code_Wars
             // Console.WriteLine(Kata.IQtest("15 13"));
 
             //Console.WriteLine(helper.PageItemCount(3));
-            Console.WriteLine(helper.PageIndex(24));
+            //Console.WriteLine(helper.PageIndex(24));
+           // Kata.Anagrams("aabbc", new List<string>());
+
+        Kata.Anagrams("racer", new List<string> { "carer", "arcre", "carre", "racrs", "racers", "arceer", "raccer", "carrer", "cerarr" });
         }
     }
 }
