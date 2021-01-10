@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Code_Wars
@@ -161,6 +162,31 @@ namespace Code_Wars
             //bp
             //var pattern = word.OrderBy(p => p).ToArray();
             //return words.Where(item => item.OrderBy(p => p).SequenceEqual(pattern)).ToList();
+        }
+
+        //10.01.21
+        public static List<string> Top3(string s) 
+        {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+
+            Regex regex = new Regex("");
+            MatchCollection matches = regex.Matches(s);
+            if (matches.Count > 0 ) 
+            {
+                foreach (Match match in matches) 
+                {
+                    if (!dictionary.Keys.Contains(match.ToString())) 
+                    {
+                        //new code
+                    }
+                }
+            }
+            else 
+            {
+                Console.WriteLine("There are no Matches");
+            }
+
+            return null;
         }
     }
 
