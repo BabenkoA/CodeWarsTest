@@ -168,16 +168,21 @@ namespace Code_Wars
         public static List<string> Top3(string s) 
         {
             Dictionary<string, int> dictionary = new Dictionary<string, int>();
-
-            Regex regex = new Regex("");
+            s = s.ToLower();
+            Regex regex = new Regex(@"\w+('\w*)*");
             MatchCollection matches = regex.Matches(s);
             if (matches.Count > 0 ) 
             {
                 foreach (Match match in matches) 
                 {
-                    if (!dictionary.Keys.Contains(match.ToString())) 
+                    //Console.WriteLine(match.Value);
+                    if (!dictionary.Keys.Contains(match.Value))
                     {
-                        //new code
+                        dictionary.Add(match.Value, 1);
+                    }
+                    else 
+                    {
+                        dictionary[match.Value]++;
                     }
                 }
             }
@@ -186,7 +191,7 @@ namespace Code_Wars
                 Console.WriteLine("There are no Matches");
             }
 
-            return null;
+            return dictionary.OrderByDescending(x => x.Value).Take(3).Select(enty => enty.Key).ToList();
         }
     }
 

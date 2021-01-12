@@ -1,4 +1,4 @@
-﻿`using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace Code_Wars
 
         static void Main(string[] args)
         {
-            PagnationHelper<int> helper = new PagnationHelper<int>(collection, 10);
+            // PagnationHelper<int> helper = new PagnationHelper<int>(collection, 10);
             //Console.WriteLine(Kata.RomanConvert(1990));
             //Console.WriteLine(Kata.is_prime(5099));
             //Console.WriteLine(Kata.MakeComplement("ATCG"));
@@ -23,9 +23,14 @@ namespace Code_Wars
 
             //Console.WriteLine(helper.PageItemCount(3));
             //Console.WriteLine(helper.PageIndex(24));
-           // Kata.Anagrams("aabbc", new List<string>());
+            // Kata.Anagrams("aabbc", new List<string>());
 
-        Kata.Anagrams("racer", new List<string> { "carer", "arcre", "carre", "racrs", "racers", "arceer", "raccer", "carrer", "cerarr" });
+            // Kata.Anagrams("racer", new List<string> { "carer", "arcre", "carre", "racrs", "racers", "arceer", "raccer", "carrer", "cerarr" });
+
+            foreach (string s in Kata.Top3("a a b b b c'")) 
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
