@@ -8,7 +8,7 @@ namespace Code_Wars
 {
     class Program
     {
-        private static readonly IList<int> collection = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 };
+        //private static readonly IList<int> collection = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 };
 
         static void Main(string[] args)
         {
@@ -27,10 +27,15 @@ namespace Code_Wars
 
             // Kata.Anagrams("racer", new List<string> { "carer", "arcre", "carre", "racrs", "racers", "arceer", "raccer", "carrer", "cerarr" });
 
-            foreach (string s in Kata.Top3("a a b b b c'")) 
+            /*foreach (string s in Kata.Top3("a a b b b c'")) 
             {
                 Console.WriteLine(s);
-            }
+            }*/
+
+            //Console.WriteLine( Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
+
+            
+
         }
     }
 }

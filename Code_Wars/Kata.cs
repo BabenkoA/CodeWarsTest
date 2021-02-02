@@ -193,6 +193,34 @@ namespace Code_Wars
 
             return dictionary.OrderByDescending(x => x.Value).Take(3).Select(enty => enty.Key).ToList();
         }
+
+        public static bool IsPangram(string str) => 26 == str.ToLower().Where(x => x >= 97 && x <= 122).Distinct().Count();
+
+        public static int[] DeleteNth(int[] arr , int x) 
+        {
+             List<int> lst = new List<int>(arr);
+
+             for(int i = 0; i < lst.Count; i++)
+             {
+                 int count = lst.Where(t => t == lst[i]).Count();
+                 while (count > x) 
+                 {
+                     lst.RemoveAt(lst.LastIndexOf(lst[i]));
+                     count--;
+                 }
+             }
+
+             return lst.ToArray();   
+
+            /*Codewars Best Practices*/
+            /*var result = new List<int>();
+            foreach (var item in arr)
+            {
+                if (result.Count(i => i == item) < x)
+                    result.Add(item);
+            }
+            return result.ToArray();*/
+        }
     }
 
     public class PagnationHelper<T> 
