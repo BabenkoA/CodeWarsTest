@@ -10,6 +10,196 @@ namespace Code_Wars
 {
     public static class Kata
     {
+        // old work
+        public static string Likes(string[] name)
+        {
+            switch (name.Length)
+            {
+                case 0:
+                    return "no one likes this";
+                case 1:
+                    return name[0] + " likes this";
+                case 2:
+                    return name[0] + " and " + name[1] + " like this";
+                case 3:
+                    return name[0] + ", " + name[1] + " and " + name[2] + " like this";
+                case int n when (n > 3):
+                    return name[0] + ", " + name[1] + " and " + (n - 2) + " others like this";
+                default:
+                    return "no one likes this";
+            }
+        }
+
+        public static int DontGiveMeFive(int start, int end)
+        {
+            int res = 0;
+            for (int i = start; i <= end; i++)
+            {
+                if (i.ToString().IndexOf("5") != -1)
+                {
+                    continue;
+                }
+                res++;
+            }
+            return res;
+        }
+
+        public static string PigIt(string str)
+        {
+            Regex regex = new Regex(@"^(\w+)");
+            Regex regex2 = new Regex(@"(\s)(\w+)");
+            MatchCollection matches_f = regex.Matches(str);
+            MatchCollection matches = regex2.Matches(str);
+
+            foreach (Match match1 in matches_f)
+            {
+                str = str.Replace(match1.Value, match1.Value.Insert(match1.Value.Length, match1.Value.Substring(0, 1)).Remove(0, 1) + "ay");
+            }
+
+            foreach (Match match in matches)
+            {
+                str = str.Replace(match.Value, match.Value.Insert(match.Value.Length, match.Value.Substring(1, 1)).Remove(1, 1) + "ay");
+            }
+            Console.WriteLine(str);
+            return str;
+        }
+
+        public static int RomanDecode(string roman)
+        {
+            Dictionary<char, int> rom_int = new Dictionary<char, int>
+            {
+                { 'I', 1 },
+                { 'V', 5 },
+                { 'X', 10 },
+                { 'L', 50 },
+                { 'C', 100 },
+                { 'D', 500 },
+                { 'M', 1000 }
+            };
+
+            int output = 0;
+
+            for (int i = 0; i < roman.Length - 1; i++)
+            {
+                if (rom_int[roman[i]] < rom_int[roman[i + 1]])
+                {
+                    output -= rom_int[roman[i]];
+                }
+                else
+                {
+                    output += rom_int[roman[i]];
+                }
+            }
+            output += rom_int[roman[roman.Length - 1]]; ;
+
+            return output;
+        }
+
+        public static int MaxSubarray(int[] arr)
+        {
+            int max = 0;
+            int prev, curr;
+            if (arr.Length > 0)
+                max = arr[0];
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                prev = arr[i];
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    curr = prev + arr[j];
+                    if (max < curr)
+                    {
+                        max = curr;
+                    }
+                    prev = curr;
+                }
+                if (arr[arr.Length - 1] > max)
+                {
+                    max = arr[arr.Length - 1];
+                }
+            }
+            return max;
+        }
+
+        public static int[] Parse(string data)
+        {
+            List<int> list = new List<int>();
+            int num = 0;
+            foreach (char ch in data)
+            {
+                switch (ch)
+                {
+                    case 'i':
+                        num++;
+                        break;
+                    case 'd':
+                        num--;
+                        break;
+                    case 's':
+                        num = (int)Math.Pow(num, 2);
+                        break;
+                    case 'o':
+                        list.Add(num);
+                        break;
+                    default: break;
+                }
+            }
+            return list.ToArray();
+        }
+
+        public static string GetReadable(int seconds)
+        {
+            string hz = "", mz = "", sz = "";
+
+            int mm_all = seconds / 60;
+            int hh = mm_all / 60;
+            if (hh < 10) { hz = "0"; };
+            int mm = mm_all - hh * 60;
+            if (mm < 10) { mz = "0"; }
+            int ss = seconds % 60;
+            if (ss < 10) { sz = "0"; }
+
+            return hz + hh + ":" + mz + mm + ":" + sz + ss;
+        }
+
+        public static string GetReadableRefactoring(int seconds)
+        {
+            int mm_all = seconds / 60;
+            int hh = mm_all / 60;
+            int mm = mm_all - hh * 60;
+            int ss = seconds % 60;
+            string output = String.Format("{0:d2}:{1:d2}:{2:d2}", hh, mm, ss);
+            return output;
+        }
+
+        public static int DigitRoot(long n)
+        {
+            int res = 0;
+            if (n.ToString().Length <= 1)
+            {
+                return (int)n;
+            }
+            for (int i = 0; i < n.ToString().Length; i++)
+            {
+                res += Int32.Parse(n.ToString().Substring(i, 1));
+            }
+            return DigitRoot(res);
+        }
+
+        public static string ToUnderscore(string str)
+        {
+            string output = "";
+            string[] words = Regex.Split(str, @"(?=[A-Z])");
+            for (int i = 1; i < words.Length - 1; i++)
+            {
+                output += words[i].ToLower() + '_';
+            }
+            output += words[words.Length - 1].ToLower();
+            return output;
+        }
+        //work
+
         public static string RomanConvert(int n) 
         {
                 return  n >= 1000?  "M" + RomanConvert(n - 1000):
