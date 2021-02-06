@@ -94,3 +94,5 @@ E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\Code
 E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\CodeWarsTest.csproj.CopyComplete
 E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\CodeWarsTest.dll
 E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\CodeWarsTest.pdb
+E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\CodeWarsTest.csproj.CoreCompileInputs.cache
+E:\Documents\Tasks\Code_Wars\Code_Wars\CodeWarsTest\obj\Debug\netcoreapp3.1\CodeWarsTest.genruntimeconfig.cache

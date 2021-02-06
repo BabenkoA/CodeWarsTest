@@ -46,5 +46,18 @@ namespace CodeWarsTest
         {
             Assert.AreEqual(3, helper.PageCount);
         }
+
+        [Test]
+        public void SampleTest()
+        {
+            //Assert.AreEqual(new List<string> { "a" }, Kata.Anagrams("a", new List<string> { "a", "b", "c", "d" }));
+            Assert.AreEqual(new List<string> { "carer", "arcre", "carre" }, Kata.Anagrams("racer", new List<string> { "carer", "arcre", "carre", "racrs", "racers", "arceer", "raccer", "carrer", "cerarr" }));
+        }
+
+        [Test]
+        public void DeleteOccTest() 
+        {
+            Assert.AreEqual(new int[] { 1, 1, 3, 3, 7, 2, 2, 2 }, Kata.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3));
+        }
     }
 }
