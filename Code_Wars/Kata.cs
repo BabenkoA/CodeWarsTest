@@ -411,6 +411,28 @@ namespace Code_Wars
             }
             return result.ToArray();*/
         }
+
+        public static string BreakCamelCase(string str)
+        {
+            for(int i = 1; i < str.Length; i++)
+            {
+                if (str[i-1] != ' ' && String.Equals(str[i].ToString(), str[i].ToString().ToUpper())) 
+                {
+                    str = str.Insert( i, " ");
+                }
+                Console.WriteLine(str);
+            }
+
+            return str;
+
+            /*//1
+             public static string BreakCamelCase(string str) =>
+             new Regex("([A-Z])").Replace(str, " $1");
+            //2
+            return string.Concat(str.Select(c => Char.IsUpper(c) ? " " + c : c.ToString()));
+
+             */
+        }
     }
 
     public class PagnationHelper<T> 
