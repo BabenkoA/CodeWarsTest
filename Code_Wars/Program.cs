@@ -34,7 +34,7 @@ namespace Code_Wars
 
             //Console.WriteLine( Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
 
-            
+            Kata.BreakCamelCase("camelCasingTest");
 
         }
     }
