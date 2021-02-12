@@ -456,6 +456,7 @@ namespace Code_Wars
 
             return new ulong[] { fibonachi[fibonachi.Count-2], fibonachi.Last(), Convert.ToUInt16(mulProd == prod) };
         }
+
     }
 
     public class PagnationHelper<T> 
