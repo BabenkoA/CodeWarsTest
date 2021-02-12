@@ -34,8 +34,9 @@ namespace Code_Wars
 
             //Console.WriteLine( Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
 
-            
+            //Console.WriteLine(Kata.PowerSumDigTerm(2));
 
+           // Kata.productFib(62423800998);
         }
     }
 }

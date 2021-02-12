@@ -59,5 +59,12 @@ namespace CodeWarsTest
         {
             Assert.AreEqual(new int[] { 1, 1, 3, 3, 7, 2, 2, 2 }, Kata.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3));
         }
+
+        [Test]
+        public void productFibTest()
+        {
+            ulong[] r = new ulong[] { 55, 89, 1 };
+            Assert.AreEqual(r, Kata.productFib(4895));
+        }
     }
 }

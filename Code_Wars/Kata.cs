@@ -411,6 +411,51 @@ namespace Code_Wars
             }
             return result.ToArray();*/
         }
+
+        //11.02.21 don't works
+        public static long PowerSumDigTerm(int n)
+        {
+            long num = 80;
+           
+            for (int i = 0; i < n; i++)
+            {
+                int pow = 1;
+                bool eq = false;
+                while (!eq)
+                {
+                    num++;
+                    int sum = num.ToString().Select(x => Int32.Parse(x.ToString())).ToList().Sum();
+
+                    while (Math.Pow(sum, pow) <= num)
+                    {
+                        if (Math.Pow(sum, pow) == num)
+                        {
+                            eq = true;
+                        }
+                            pow++;
+                    };
+                }
+            }
+
+            return num;
+        }
+
+        //12.02.21
+
+        public static ulong[] productFib(ulong prod)
+        {
+            List<ulong> fibonachi = new List<ulong> { 0, 1 };
+            ulong mulProd;
+
+            do
+            {
+                ulong newLast = fibonachi.Skip(fibonachi.Count() - 2).Take(2).ToArray().Aggregate((x,y)=> x+y);
+                mulProd = fibonachi.Last() * newLast;
+                fibonachi.Add(newLast);
+            } while (mulProd < prod);
+
+            return new ulong[] { fibonachi[fibonachi.Count-2], fibonachi.Last(), Convert.ToUInt16(mulProd == prod) };
+        }
     }
 
     public class PagnationHelper<T> 
