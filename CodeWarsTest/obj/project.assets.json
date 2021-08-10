@@ -5286,11 +5286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
+      "projectUniqueName": "C:\\Andrii\\Andrii_Docs\\Projects\\GitHub\\CodeWarsTest\\CodeWarsTest.csproj",
       "projectName": "CodeWarsTest",
-      "projectPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
+      "projectPath": "C:\\Andrii\\Andrii_Docs\\Projects\\GitHub\\CodeWarsTest\\CodeWarsTest.csproj",
       "packagesPath": "C:\\Users\\BabenkoA\\.nuget\\packages\\",
-      "outputPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\obj\\",
+      "outputPath": "C:\\Andrii\\Andrii_Docs\\Projects\\GitHub\\CodeWarsTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BabenkoA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5305,9 +5305,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj": {
-              "projectPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj"
+            "C:\\Andrii\\Andrii_Docs\\Projects\\GitHub\\Code_Wars\\Code_Wars.csproj": {
+              "projectPath": "C:\\Andrii\\Andrii_Docs\\Projects\\GitHub\\Code_Wars\\Code_Wars.csproj"
             }
           }
         }
@@ -5320,6 +5321,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -5349,7 +5351,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

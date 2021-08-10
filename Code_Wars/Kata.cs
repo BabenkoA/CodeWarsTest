@@ -512,6 +512,12 @@ namespace Code_Wars
             }
         }
 
+        //10.08.21
+        public static string EgyptianFraction(string nrStr, string drStr)
+        {
+            // your code
+            return null;
+        }
     }
 }
     
