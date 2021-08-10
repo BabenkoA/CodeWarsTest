@@ -488,6 +488,11 @@ namespace Code_Wars
             }
         }
 
+        public static string EgyptianFraction(string nrStr, string drStr)
+        {
+            return null;
+        }
+
     }
 }
     
