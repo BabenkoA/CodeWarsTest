@@ -8,6 +8,61 @@ using System.Threading.Tasks;
 
 namespace Code_Wars
 {
+    public class PagnationHelper<T>
+    {
+        private IList<T> collect;
+        private int item;
+        public PagnationHelper(IList<T> collection, int itemsPerPage)
+        {
+            collect = collection;
+            item = itemsPerPage;
+        }
+
+        public int ItemCount
+        {
+            get
+            {
+                return collect.Count;
+            }
+        }
+
+        public int PageCount
+        {
+            get
+            {
+                return (int)Math.Ceiling((decimal)collect.Count / (decimal)item);
+            }
+        }
+
+        public int PageItemCount(int pageIndex)
+        {
+            return pageIndex < 0 || pageIndex > this.PageCount - 1 ? -1 : pageIndex < this.PageCount - 1 ? this.item : this.ItemCount - ((this.PageCount - 1) * this.item);
+        }
+
+        public int PageIndex(int itemIndex)
+        {
+            if (itemIndex < 0 || itemIndex >= this.ItemCount) return -1;
+
+            if (itemIndex < item)
+            {
+                return 0;
+            }
+            else
+            {
+                int itemsLeft = itemIndex;
+                int pages = 0;
+                do
+                {
+                    itemsLeft -= item;
+                    pages++;
+                } while (itemsLeft >= item);
+
+                return pages;
+            }
+        }
+
+    }
+
     public static class Kata
     {
         // old work
@@ -433,66 +488,26 @@ namespace Code_Wars
 
              */
         }
-    }
-
-    public class PagnationHelper<T> 
-    {
-        private IList<T> collect;
-        private int item;
-        public PagnationHelper(IList<T> collection, int itemsPerPage)
-        {
-            collect = collection;
-            item = itemsPerPage;
-        }
-
-        public int ItemCount
-        {
-            get
-            {
-                return collect.Count;
-            }
-        }
-
-        public int PageCount
-        {
-            get
-            {
-                return (int)Math.Ceiling((decimal)collect.Count / (decimal)item);
-            }
-        }
-
-        public int PageItemCount(int pageIndex)
-        {
-            return pageIndex < 0 || pageIndex > this.PageCount - 1 ? -1 : pageIndex < this.PageCount - 1 ? this.item : this.ItemCount - ((this.PageCount - 1) * this.item);
-        }
-
-        public int PageIndex(int itemIndex)
-        {
-            if (itemIndex < 0 || itemIndex >= this.ItemCount) return -1;
-
-            if (itemIndex < item)
-            {
-                return 0;
-            }
-            else
-            {
-                int itemsLeft = itemIndex;
-                int pages = 0;
-                do
-                {
-                    itemsLeft -= item;
-                    pages++;
-                } while (itemsLeft >= item);
-
-                return pages;
-            }
-        }
 
         public static string EgyptianFraction(string nrStr, string drStr)
         {
+            if (nrStr == "0" || drStr == "0")
+                return "Error";
+
+            Int32.TryParse(nrStr, out int nr);
+            Int32.TryParse(drStr, out int dr);
+
+            if (nr % dr == 0)
+                return (nr / dr).ToString();
+
+            if (dr % nr == 0)
+                return "1/"+(dr / nr).ToString();
+
+
+
             return null;
         }
-
     }
+
 }
     

@@ -5,3 +5,10 @@ E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.csprojAssem
 E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.exe
 E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.pdb
 E:\Documents\Tasks\Code_Wars\Code_Wars\Code_Wars\obj\Debug\Code_Wars.csproj.CoreCompileInputs.cache
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.exe.config
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.exe
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.pdb
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.csproj.AssemblyReference.cache
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.csproj.CoreCompileInputs.cache
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.exe
+C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.pdb
