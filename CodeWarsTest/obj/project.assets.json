@@ -5281,19 +5281,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BabenkoA\\.nuget\\packages\\": {}
+    "C:\\Users\\smaee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
+      "projectUniqueName": "E:\\Documents\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
       "projectName": "CodeWarsTest",
-      "projectPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
-      "packagesPath": "C:\\Users\\BabenkoA\\.nuget\\packages\\",
-      "outputPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest\\obj\\",
+      "projectPath": "E:\\Documents\\Projects\\CodeWarsTest\\CodeWarsTest\\CodeWarsTest.csproj",
+      "packagesPath": "C:\\Users\\smaee\\.nuget\\packages\\",
+      "outputPath": "E:\\Documents\\Projects\\CodeWarsTest\\CodeWarsTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\BabenkoA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\smaee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5306,8 +5306,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj": {
-              "projectPath": "D:\\Andrii\\Projects\\CodeWarsTest\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj"
+            "E:\\Documents\\Projects\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj": {
+              "projectPath": "E:\\Documents\\Projects\\CodeWarsTest\\Code_Wars\\Code_Wars.csproj"
             }
           }
         }
@@ -5349,7 +5349,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
