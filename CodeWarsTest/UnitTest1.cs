@@ -59,5 +59,26 @@ namespace CodeWarsTest
         {
             Assert.AreEqual(new int[] { 1, 1, 3, 3, 7, 2, 2, 2 }, Kata.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3));
         }
+
+
+    }
+
+
+    [TestFixture]
+    public static class KataTests
+    {
+        private static void testing(string actual, string expected)
+        {
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public static void test()
+        {
+            Console.WriteLine("Fixed Tests");
+            testing(Kata.EgyptianFraction("3", "4"), "[1/2, 1/4]");
+            testing(Kata.EgyptianFraction("12", "4"), "[3]"); 
+            testing(Kata.EgyptianFraction("0", "2"), "[]");
+            testing(Kata.EgyptianFraction("9", "10"), "[1/2, 1/3, 1/15]");
+        }
     }
 }

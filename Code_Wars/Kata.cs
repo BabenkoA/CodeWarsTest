@@ -255,69 +255,69 @@ namespace Code_Wars
         }
         //work
 
-        public static string RomanConvert(int n) 
+        public static string RomanConvert(int n)
         {
-                return  n >= 1000?  "M" + RomanConvert(n - 1000):
-                        n >= 900 ? "CM" + RomanConvert(n - 900) :
-                        n >= 500 ?  "D" + RomanConvert(n - 500) :
-                        n >= 400 ? "CD" + RomanConvert(n - 400) :
-                        n >= 100 ?  "C" + RomanConvert(n - 100) :
-                        n >= 90  ? "XC" + RomanConvert(n - 90) :
-                        n >= 50  ?  "L" + RomanConvert(n - 50)  :
-                        n >= 40  ? "XL" + RomanConvert(n - 40) :
-                        n >= 10  ?  "X" + RomanConvert(n - 10)  :
-                        n >= 9   ? "IX" + RomanConvert(n - 9) :
-                        n >= 5   ?  "V" + RomanConvert(n - 5)   :
-                        n >= 4   ? "IV" + RomanConvert(n - 4) :
-                        n >= 1   ?  "I" + RomanConvert(n - 1)   :"";
+            return n >= 1000 ? "M" + RomanConvert(n - 1000) :
+                    n >= 900 ? "CM" + RomanConvert(n - 900) :
+                    n >= 500 ? "D" + RomanConvert(n - 500) :
+                    n >= 400 ? "CD" + RomanConvert(n - 400) :
+                    n >= 100 ? "C" + RomanConvert(n - 100) :
+                    n >= 90 ? "XC" + RomanConvert(n - 90) :
+                    n >= 50 ? "L" + RomanConvert(n - 50) :
+                    n >= 40 ? "XL" + RomanConvert(n - 40) :
+                    n >= 10 ? "X" + RomanConvert(n - 10) :
+                    n >= 9 ? "IX" + RomanConvert(n - 9) :
+                    n >= 5 ? "V" + RomanConvert(n - 5) :
+                    n >= 4 ? "IV" + RomanConvert(n - 4) :
+                    n >= 1 ? "I" + RomanConvert(n - 1) : "";
         }
-        public static bool is_prime(int n) 
+        public static bool is_prime(int n)
         {
             if (n <= 1) return false;
             if (n == 2) return true;
 
             double limit = Math.Ceiling(Math.Sqrt(n));
 
-            for (int i = 2; i <= limit; i++) 
+            for (int i = 2; i <= limit; i++)
             {
                 if (n % i == 0) return false;
             }
             return true;
         }
 
-        public static string MakeComplement(string dna) 
+        public static string MakeComplement(string dna)
         {
-             Dictionary<char, char> pairs = new Dictionary<char, char>
+            Dictionary<char, char> pairs = new Dictionary<char, char>
              {
                  {'A','T'},
                  {'G','C'},
                  {'T','A'},
                  {'C','G'}
              };
-             string output="";
-             for (int i = 0; i < dna.Length; i++) 
-             {
-                 output += dna.Substring(i,1).Replace(dna[i],pairs[dna[i]]);
-             }
-             return output;
+            string output = "";
+            for (int i = 0; i < dna.Length; i++)
+            {
+                output += dna.Substring(i, 1).Replace(dna[i], pairs[dna[i]]);
+            }
+            return output;
         }
 
         public static int IQtest(string numbers)
         {
-            int [] numbers_int = numbers.Split(' ').Select(n=>Convert.ToInt32(n)).ToArray();
+            int[] numbers_int = numbers.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
             bool[] odd = new bool[numbers_int.Length];
             bool[] other = new bool[numbers_int.Length];
             int count_false = 0, count_true = 0;
 
 
-            for(int i =0;i< numbers_int.Length;i++)
+            for (int i = 0; i < numbers_int.Length; i++)
             {
                 if (Int32.Parse(numbers_int[i].ToString()) % 2 == 0)
                 {
                     odd[i] = false;
                     count_false++;
                 }
-                else 
+                else
                 {
                     odd[i] = true;
                     count_true++;
@@ -343,23 +343,23 @@ namespace Code_Wars
                     }
                 }
             }
-            else 
-            {       
-                   IEnumerable<bool> same = numbers_int.Select(n => n.Equals(numbers_int[0]));
-                int c_true = same.Count(ch=>ch.ToString().Contains("True"));
+            else
+            {
+                IEnumerable<bool> same = numbers_int.Select(n => n.Equals(numbers_int[0]));
+                int c_true = same.Count(ch => ch.ToString().Contains("True"));
                 int c_false = same.Count(ch => ch.ToString().Contains("False"));
-                return c_true == 1 ? same.ToList().IndexOf(true)+1 : same.ToList().IndexOf(false)+1;
+                return c_true == 1 ? same.ToList().IndexOf(true) + 1 : same.ToList().IndexOf(false) + 1;
             }
             return 0;
         }
 
         public static List<string> Anagrams(string word, List<string> words)
         {
-            Dictionary<char,int> dictionary = new Dictionary<char, int>();
+            Dictionary<char, int> dictionary = new Dictionary<char, int>();
             List<string> anagrams = new List<string>();
             Dictionary<char, int> check = new Dictionary<char, int>();
 
-            foreach (char ch in word) 
+            foreach (char ch in word)
             {
                 int count = word.Where(x => x.Equals(ch)).Count();
                 if (!dictionary.Keys.Contains(ch))
@@ -368,7 +368,7 @@ namespace Code_Wars
                 }
             }
 
-            foreach (string lst_word in words) 
+            foreach (string lst_word in words)
             {
                 foreach (char ch in lst_word)
                 {
@@ -378,10 +378,10 @@ namespace Code_Wars
                         check.Add(ch, count);
                     }
                 }
-                if (check.Count == dictionary.Count) 
+                if (check.Count == dictionary.Count)
                 {
                     bool check_word = true;
-                    foreach (KeyValuePair<char, int> valuePair in check) 
+                    foreach (KeyValuePair<char, int> valuePair in check)
                     {
                         if (dictionary.Keys.Contains(valuePair.Key))
                         {
@@ -390,9 +390,10 @@ namespace Code_Wars
                                 check_word = false;
                             }
                         }
-                        else {
+                        else
+                        {
                             check_word = false;
-                         }
+                        }
                     }
                     if (check_word)
                     {
@@ -410,28 +411,28 @@ namespace Code_Wars
         }
 
         //10.01.21
-        public static List<string> Top3(string s) 
+        public static List<string> Top3(string s)
         {
             Dictionary<string, int> dictionary = new Dictionary<string, int>();
             s = s.ToLower();
             Regex regex = new Regex(@"\w+('\w*)*");
             MatchCollection matches = regex.Matches(s);
-            if (matches.Count > 0 ) 
+            if (matches.Count > 0)
             {
-                foreach (Match match in matches) 
+                foreach (Match match in matches)
                 {
                     //Console.WriteLine(match.Value);
                     if (!dictionary.Keys.Contains(match.Value))
                     {
                         dictionary.Add(match.Value, 1);
                     }
-                    else 
+                    else
                     {
                         dictionary[match.Value]++;
                     }
                 }
             }
-            else 
+            else
             {
                 Console.WriteLine("There are no Matches");
             }
@@ -441,21 +442,21 @@ namespace Code_Wars
 
         public static bool IsPangram(string str) => 26 == str.ToLower().Where(x => x >= 97 && x <= 122).Distinct().Count();
 
-        public static int[] DeleteNth(int[] arr , int x) 
+        public static int[] DeleteNth(int[] arr, int x)
         {
-             List<int> lst = new List<int>(arr);
+            List<int> lst = new List<int>(arr);
 
-             for(int i = 0; i < lst.Count; i++)
-             {
-                 int count = lst.Where(t => t == lst[i]).Count();
-                 while (count > x) 
-                 {
-                     lst.RemoveAt(lst.LastIndexOf(lst[i]));
-                     count--;
-                 }
-             }
+            for (int i = 0; i < lst.Count; i++)
+            {
+                int count = lst.Where(t => t == lst[i]).Count();
+                while (count > x)
+                {
+                    lst.RemoveAt(lst.LastIndexOf(lst[i]));
+                    count--;
+                }
+            }
 
-             return lst.ToArray();   
+            return lst.ToArray();
 
             /*Codewars Best Practices*/
             /*var result = new List<int>();
@@ -469,11 +470,11 @@ namespace Code_Wars
 
         public static string BreakCamelCase(string str)
         {
-            for(int i = 1; i < str.Length; i++)
+            for (int i = 1; i < str.Length; i++)
             {
-                if (str[i-1] != ' ' && String.Equals(str[i].ToString(), str[i].ToString().ToUpper())) 
+                if (str[i - 1] != ' ' && String.Equals(str[i].ToString(), str[i].ToString().ToUpper()))
                 {
-                    str = str.Insert( i, " ");
+                    str = str.Insert(i, " ");
                 }
                 Console.WriteLine(str);
             }
@@ -492,22 +493,45 @@ namespace Code_Wars
         public static string EgyptianFraction(string nrStr, string drStr)
         {
             if (nrStr == "0" || drStr == "0")
-                return "Error";
+                return "[]";
 
-            Int32.TryParse(nrStr, out int nr);
-            Int32.TryParse(drStr, out int dr);
+            Int64.TryParse(nrStr, out long nr);
+            Int64.TryParse(drStr, out long dr);
 
             if (nr % dr == 0)
-                return (nr / dr).ToString();
+                return "[" + (nr / dr).ToString() + "]";
 
             if (dr % nr == 0)
-                return "1/"+(dr / nr).ToString();
+                return "[1/" + (dr / nr).ToString() + "]";
 
+            string outp = "[";
 
+            if (nr > dr)
+            {
+                outp += (nr / dr).ToString() + ", ";
+                nr %= dr;
+            }
 
-            return null;
+            while (nr != 1)
+            {
+                if (dr % nr == 0)
+                {
+                    dr /= nr;
+                    nr = 1;
+                }
+                else
+                {
+                    long n = dr / nr + 1;
+                    outp += "1/" + n + ", ";
+                    nr = nr * n - dr;
+                    dr *= n;
+                }
+
+            }
+
+            outp += "1/" + dr + "]";
+
+            return outp;
         }
     }
-
 }
-    
