@@ -26,5 +26,11 @@ namespace Code_Wars
         {
             Array.Resize<T>(ref arr, Length - 1);
         }
+
+        public T Find() 
+        {
+            return default(T);
+        }
+
     }
 }
