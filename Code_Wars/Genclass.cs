@@ -31,5 +31,6 @@ namespace Code_Wars
         {
             return default(T);
         }
+
     }
 }
