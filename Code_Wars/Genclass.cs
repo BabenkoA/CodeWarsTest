@@ -27,10 +27,32 @@ namespace Code_Wars
             Array.Resize<T>(ref arr, Length - 1);
         }
 
-        public T Find() 
+        public T Find(int index) 
         {
-            return default(T);
+            try
+            {
+                if (index < 0 || index >= Length)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+            }
+            catch (IndexOutOfRangeException e) 
+            {
+                Console.WriteLine(e.ToString()); 
+                return default(T);
+            }
+            return arr[index];
+
         }
 
+        public int FindFirstIndex(T item) => arr.ToList<T>().IndexOf(item);
+
+        public void Show()
+        {
+            foreach (T item in arr)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }

@@ -36,7 +36,10 @@ namespace Code_Wars
 
             //Kata.BreakCamelCase("camelCasingTest");
 
-            Console.WriteLine(Kata.EgyptianFraction("4", "8") );
+            // Console.WriteLine(Kata.EgyptianFraction("4", "8") );
+
+           // Genclass<int> numbers = new Genclass<int>();
+           // numbers.Add(1);
 
         }
     }
