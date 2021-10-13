@@ -36,8 +36,33 @@ namespace Code_Wars
 
             //Kata.BreakCamelCase("camelCasingTest");
 
-            Console.WriteLine(Kata.EgyptianFraction("4", "8") );
+            //Console.WriteLine(Kata.EgyptianFraction("4", "8") );
 
+            try
+            {
+                int[] i = new int[2];
+                int x = i[1];
+            }
+            finally {
+                Console.WriteLine("finaly");
+            }
+            try
+            {
+                try
+                {
+                    throw new ArgumentException();
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("Divide");
+                    throw;//throw ArgumentException- this ex
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("And what");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
