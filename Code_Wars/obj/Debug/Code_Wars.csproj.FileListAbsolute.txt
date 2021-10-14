@@ -12,3 +12,10 @@ C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Cod
 C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.csproj.CoreCompileInputs.cache
 C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.exe
 C:\Andrii\Andrii_Docs\Projects\CodeWarsTest\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.pdb
+E:\Documents\Projects\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.exe.config
+E:\Documents\Projects\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.exe
+E:\Documents\Projects\CodeWarsTest\Code_Wars\bin\Debug\Code_Wars.pdb
+E:\Documents\Projects\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.csprojAssemblyReference.cache
+E:\Documents\Projects\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.csproj.CoreCompileInputs.cache
+E:\Documents\Projects\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.exe
+E:\Documents\Projects\CodeWarsTest\Code_Wars\obj\Debug\Code_Wars.pdb

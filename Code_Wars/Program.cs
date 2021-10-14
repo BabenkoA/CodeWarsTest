@@ -38,8 +38,14 @@ namespace Code_Wars
 
             // Console.WriteLine(Kata.EgyptianFraction("4", "8") );
 
-           // Genclass<int> numbers = new Genclass<int>();
-           // numbers.Add(1);
+            // Genclass<int> numbers = new Genclass<int>();
+            // numbers.Add(1);
+
+            DelegateTrn delegateTrn = new DelegateTrn();
+
+            delegateTrn.mes();
+
+            DelegateMethods delegateMethod = new DelegateMethods(2,3);
 
         }
     }
