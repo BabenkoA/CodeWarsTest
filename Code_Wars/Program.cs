@@ -41,6 +41,12 @@ namespace Code_Wars
             // Genclass<int> numbers = new Genclass<int>();
             // numbers.Add(1);
 
+            DelegateTrn delegateTrn = new DelegateTrn();
+
+            delegateTrn.mes();
+
+            DelegateMethods delegateMethod = new DelegateMethods(2,3);
+
         }
     }
 }
