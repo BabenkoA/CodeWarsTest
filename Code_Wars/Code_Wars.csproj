@@ -47,6 +47,7 @@
     <Compile Include="DelegateTrn.cs" />
     <Compile Include="Genclass.cs" />
     <Compile Include="Kata.cs" />
+    <Compile Include="ListFilterer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
