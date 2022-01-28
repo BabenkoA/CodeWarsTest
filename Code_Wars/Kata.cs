@@ -502,12 +502,10 @@ namespace Code_Wars
 
             if (dr % nr == 0)
                 return "1/"+(dr / nr).ToString();
-
-
-
-
             return null;
         }
+
+        public static string Disemovel(string str) => Regex.Replace(str, "[aeuio]", "", RegexOptions.IgnoreCase);
     }
 
 }
