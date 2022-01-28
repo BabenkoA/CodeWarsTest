@@ -48,7 +48,7 @@ namespace Code_Wars
             //DelegateMethods delegateMethod = new DelegateMethods(2,3);
 
             // Console.WriteLine(CountDig.NbDig(5750, 0)); 
-            Console.WriteLine(ReversedStrings.Solution("world")); 
+            //Console.WriteLine(ReversedStrings.Solution("world")); 
         }
     }
 }
