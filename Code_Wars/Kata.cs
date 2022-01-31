@@ -506,6 +506,11 @@ namespace Code_Wars
         }
 
         public static string Disemovel(string str) => Regex.Replace(str, "[aeuio]", "", RegexOptions.IgnoreCase);
+
+        public static string AlphabetPosition(string text)
+        {
+            return string.Join(" ", text.ToLower().Where(char.IsLetter).Select(x => x - 96));//x => x - 'a'+1
+        }
     }
 
 }
