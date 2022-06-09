@@ -49,9 +49,33 @@ namespace Code_Wars
 
             // Console.WriteLine(CountDig.NbDig(5750, 0)); 
             //Console.WriteLine(ReversedStrings.Solution("world"));
-            Console.WriteLine(Kata.AlphabetPosition("The ck."));
-            string text = "The ck.";
-            Console.WriteLine(text[1] - 96) ;
+            //Console.WriteLine(Kata.AlphabetPosition("The ck."));
+            //string text = "The ck.";
+            //Console.WriteLine(text[1] - 96) ;
+
+            //int n = 9119;
+            //Console.WriteLine(int.Parse(string.Join("", n.ToString().Select(x => (int)Math.Pow(int.Parse(x.ToString()), 2)))));
+
+            string p = "man i need a taxi up to ubud";
+            string[] words = p.Split(' ');
+            string max = words[0];
+            int count;
+            int max_count = 0;
+            foreach (string str in words)
+            {
+                count = 0;
+                foreach (char c in str)
+                {
+                    count += c-96;
+                }
+                if (max_count < count) 
+                {
+                    max_count = count;
+                    max = str;
+                }
+            }
+
+            Console.WriteLine(max);
         }
     }
 }
