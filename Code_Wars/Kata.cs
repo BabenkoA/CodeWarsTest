@@ -511,6 +511,62 @@ namespace Code_Wars
         {
             return string.Join(" ", text.ToLower().Where(char.IsLetter).Select(x => x - 96));//x => x - 'a'+1
         }
+
+        public static string High(string s)
+        {
+            //string[] words = s.Split(' ');
+            //string max = words[0];
+            //int count;
+            //int max_count = 0;
+            //foreach (string str in words)
+            //{
+            //    count = 0;
+            //    foreach (char c in str)
+            //    {
+            //        count += c - 96;
+            //    }
+            //    if (max_count < count)
+            //    {
+            //        max_count = count;
+            //        max = str;
+            //    }
+            //}
+            //return max;
+            return s.Split(' ').OrderBy(a => a.Select(b => b - 96).Sum()).Last();
+        }
+
+        public static string Longest(string s1, string s2)
+        {
+            return String.Concat(s1.Concat(s2).OrderBy(x => x).Distinct());
+        }
+
+        public static int[] Maps(int[] x)
+        {
+            return x.Select(n => n*n).ToArray();
+        }
+
+        public static int[] InvertValues(int[] input)
+        {
+            return Array.ConvertAll(input, x => x*-1);
+        }
+
+        public static int SolutionMultiples(int value)
+        {
+            return value < 3 ? 0 : Enumerable.Range(0, value).Where(x => x % 3 == 0 || x % 5 == 0).Sum();
+        }
+
+        public static long findNb(long m)
+        {
+            long n = 0;
+            do
+            {
+                n++;
+                m -= (long)Math.Pow(n, 3);
+                Console.WriteLine("N: " + n);
+                Console.WriteLine("M: " + m);
+            } while (m > n);
+            return m == 0 ? n : -1;
+        }
     }
 
 }

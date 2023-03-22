@@ -56,26 +56,42 @@ namespace Code_Wars
             //int n = 9119;
             //Console.WriteLine(int.Parse(string.Join("", n.ToString().Select(x => (int)Math.Pow(int.Parse(x.ToString()), 2)))));
 
-            string p = "man i need a taxi up to ubud";
-            string[] words = p.Split(' ');
-            string max = words[0];
-            int count;
-            int max_count = 0;
-            foreach (string str in words)
+            //Console.WriteLine(Kata.Longest("aretheyhere", "yestheyarehere"));
+            int value = 10;
+            int a = Enumerable.Range(0, value).Where(x => x % 3 == 0 || x % 5 == 0).Sum();
+            //   Console.WriteLine(a);
+            int[] seq = new int[] {2,2,2,5,5};
+            int n = seq.GroupBy(x => x).Where(x => x.Count() % 2 != 0).Select(x=>x.Distinct().FirstOrDefault()).Single();
+            /* foreach (int item in n)
+             {
+                 Console.WriteLine(item);
+             }*/
+            Console.WriteLine(Kata.findNb(1071225));
+
+            string data = "iiisdoso";
+            List<int> outp = new List<int>();
+            int num = 0;
+            foreach (char item in data)
             {
-                count = 0;
-                foreach (char c in str)
+                switch (item)
                 {
-                    count += c-96;
-                }
-                if (max_count < count) 
-                {
-                    max_count = count;
-                    max = str;
+                    case 'i':
+                        num++;
+                        break;
+                    case 'd':
+                        num--;
+                        break;
+                    case 's':
+                        num = (int)Math.Pow(num, 2);
+                        break;
+                    case 'o':
+                        outp.Add(num);
+                        break;
+                    default:
+                        break;
                 }
             }
-
-            Console.WriteLine(max);
+            outp.ToArray();
         }
     }
 }
